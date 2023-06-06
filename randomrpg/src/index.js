@@ -7,12 +7,8 @@ const element = document.getElementById('root');
 const root = ReactDOM.createRoot(element);
 // 3) Create a react component
 function App(){
-    let message = 'Hi there!'
-    if(Math.random() > 0.5){
-        message = 'Hello there!';
-    }
-    let object = {};
-    return <h1>{message}{new Date().toLocaleTimeString()}</h1>;
+    const minValue = 5;
+    return <input type="number" min={minValue} max={6}></input>
 }
 // 4) Show the component on the screen
 root.render(
