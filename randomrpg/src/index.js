@@ -1,17 +1,15 @@
+// 1) Import the react and reactDOM libraries
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// 2) Get a reference to the div with ID root
+const element = document.getElementById('root');
+// 3) Tell react to take control of that element
+const root = ReactDOM.createRoot(element);
+// 3) Create a react component
+function App(){
+    return <h1>Hi there!</h1>;
+}
+// 4) Show the component on the screen
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <App />,
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
